@@ -145,6 +145,7 @@ og_list=["abbrev", "no_previous"]
 new_cols = [col for col in df.columns if col not in og_list]
 new_df = df[new_cols].head()
 
+
 # Example 9
 # Using the List Comprehension structure, write "FLAG" after the names of the variables
 # that do not contain "number" in their names in the car_crashes data.
