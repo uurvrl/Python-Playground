@@ -19,7 +19,6 @@ def altering(string):
             after += string[letter].lower()
     return after
 
-
 # Example 3
 # Complete the following tasks for the given list.
 
