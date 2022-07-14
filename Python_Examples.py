@@ -4,7 +4,8 @@
 
 text = "The goal is to turn data into information, and information into insight."
 
-text.replace("," , "").replace(".", "").upper().split()
+text.replace(",", "").replace(".", "").upper().split()
+
 
 # Example 2
 # before: "hi my name is john and i am learning python"
@@ -19,10 +20,11 @@ def altering(string):
             after += string[letter].lower()
     return after
 
+
 # Example 3
 # Complete the following tasks for the given list.
 
-lst = ["D","A","T","A","S","C","I","E","N","C","E"]
+lst = ["D", "A", "T", "A", "S", "C", "I", "E", "N", "C", "E"]
 
 # Step 1: Look at the number of elements of the given list.
 
@@ -47,20 +49,20 @@ lst
 # Example 4
 # Apply the following steps to the given dictionary structure.
 
-dict = {'Christian': ["America",18],
-        'Daisy':["England",12],
-        'Antonio':["Spain",22],
-        'Dante':["Italy",25]}
+dict = {'Christian': ["America", 18],
+        'Daisy': ["England", 12],
+        'Antonio': ["Spain", 22],
+        'Dante': ["Italy", 25]}
 # Step 1: Access the key values.
 dict.keys()
 # Step 2: Access the values.
 dict.values()
 # Step 3: Update the value 12 of the Daisy key to 13.
-dict.update({"Daisy":["England",13]})
-#Second way
+dict.update({"Daisy": ["England", 13]})
+# Second way
 dict['Daisy'][1] = 13
 # Step 4: Add a new value whose key value is Ahmet value [Turkey,24].
-dict.update({"Ahmet": ["Turkey", 24] })
+dict.update({"Ahmet": ["Turkey", 24]})
 # Step 5: Delete Antonio from dictionary.
 dict.pop("Antonio")
 dict
@@ -69,7 +71,7 @@ dict
 # Write a function that takes a list as an argument, assigns the odd and even numbers in the list to separate lists,
 # and returns these lists.
 
-l = [2,13,18,93,22]
+l = [2, 13, 18, 93, 22]
 
 
 def func(number_list):
@@ -82,6 +84,7 @@ def func(number_list):
             odd_list.append(number)
     return odd_list, even_list
 
+
 # Example 6
 # write divide_students function
 # Add even index students to a list
@@ -89,6 +92,7 @@ def func(number_list):
 # Both lists must be returned as the same list.
 
 students = ["John", "Mark", "Venessa", "Mariam"]
+
 
 def divide_students(list):
     groups = [[], []]
@@ -100,32 +104,35 @@ def divide_students(list):
             groups[1].append(list[index])
     print(groups)
 
+
 divide_students(students)
 
-#Without enumerate
+
+# Without enumerate
 
 def divider(list):
     evenoddgroup = [[], []]
     for student_index in range(len(students)):
-        if  student_index % 2   == 0:
+        if student_index % 2 == 0:
             evenoddgroup[0].append(students[student_index])
         else:
             evenoddgroup[1].append(students[student_index])
     return evenoddgroup
 
 
-odd_list , even_list = func(l)
+odd_list, even_list = func(l)
 
 # Example 7
 # Using the List Comprehension structure,
 # Capitalize the names of the numeric variables in the car_crashes data and add NUM to the beginning.
 
 import seaborn as sns
+
 df = sns.load_dataset("car_crashes")
 df.columns
 
 num_cols = [col for col in df.columns if df[col].dtype != "O"]
-soz={}
+soz = {}
 ["NUM_" + col.upper() if col in num_cols else col.upper() for col in df.columns]
 
 # Example 8
@@ -139,11 +146,10 @@ soz={}
 # 3 22.400     4.032    5.824          21.056      827.340     142.390
 # 4 12.000     4.200    3.360          10.920      878.410     165.630
 
-og_list=["abbrev", "no_previous"]
+og_list = ["abbrev", "no_previous"]
 
 new_cols = [col for col in df.columns if col not in og_list]
 new_df = df[new_cols].head()
-
 
 # Example 9
 # Using the List Comprehension structure, write "FLAG" after the names of the variables
@@ -167,6 +173,7 @@ new_df = df[new_cols].head()
 #  'ins_losses': ['mean', 'min', 'max', 'var']}
 
 import seaborn as sns
+
 df = sns.load_dataset("car_crashes")
 df.columns
 
